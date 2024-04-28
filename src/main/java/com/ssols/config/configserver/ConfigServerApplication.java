@@ -1,4 +1,4 @@
-package com.bos.config.configserver;
+package com.ssols.config.configserver;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

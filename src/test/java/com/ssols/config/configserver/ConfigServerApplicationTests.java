@@ -1,4 +1,4 @@
-package com.bos.config.configserver;
+package com.ssols.config.configserver;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
