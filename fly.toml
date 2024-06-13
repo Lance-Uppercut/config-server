@@ -1,0 +1,29 @@
+# fly.toml app configuration file generated for forever-api on 2024-03-10T13:16:23+01:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'config-server'
+primary_region = 'arn'
+
+[build]
+
+[env]
+  SPRING_PROFILES_ACTIVE=git
+  SPRING_CLOUD_CONFIG_SERVER_GIT_URI=https://github_com/Lance-Uppercut/config-server-configs
+  SPRING_CLOUD_CONFIG_SERVER_GIT_USERNAME=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
+  SPRING_CLOUD_CONFIG_SERVER_GIT_PASSWORD=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
+  SPRING_CLOUD_CONFIG_SERVER_GIT_DEFAULT-LABEL=main
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = false
+  auto_start_machines = false
+  min_machines_running = 1
+  processes = ['app']
+
+[[vm]]
+  memory = '512mb'
+  cpu_kind = 'shared'
+  cpus = 1
