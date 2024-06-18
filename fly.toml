@@ -1,4 +1,4 @@
-# fly.toml app configuration file generated for forever-api on 2024-03-10T13:16:23+01:00
+# fly.toml app configuration file generated for config-server on 2024-06-13T12:49:54+02:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
@@ -9,9 +9,11 @@ primary_region = 'arn'
 [build]
 
 [env]
-  SPRING_PROFILES_ACTIVE=git
-  SPRING_CLOUD_CONFIG_SERVER_GIT_URI=https://github_com/Lance-Uppercut/config-server-configs
-  SPRING_CLOUD_CONFIG_SERVER_GIT_DEFAULT-LABEL=main
+  SERVER_PORT=8080
+  SPRING_CLOUD_CONFIG_SERVER_GIT_DEFAULT_LABEL = 'main'
+  SPRING_CLOUD_CONFIG_SERVER_GIT_URI = 'https://github.com/Lance-Uppercut/config-server-configs'
+  SPRING_PROFILES_ACTIVE = 'git'
+  DEBUG='true'
 
 [http_service]
   internal_port = 8080
@@ -22,6 +24,5 @@ primary_region = 'arn'
   processes = ['app']
 
 [[vm]]
-  memory = '512mb'
-  cpu_kind = 'shared'
-  cpus = 1
+  size = 'shared-cpu-1x'
+  memory_mb = 512
