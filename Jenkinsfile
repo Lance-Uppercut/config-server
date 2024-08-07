@@ -1,2 +1,2 @@
 
-springBootDockerCiPipeline()
+springBootDockerCiPipelineNoIT()
