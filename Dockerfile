@@ -1,4 +1,5 @@
-FROM openjdk:17
+#FROM openjdk:17
+FROM azul/zulu-openjdk:23-jre
 VOLUME /tmp
 # RUN sh mvnw --settings setting.xml clean package -DskipTests
 ARG JAR_FILE=target/*.jar
