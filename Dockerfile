@@ -1,6 +1,8 @@
 #FROM openjdk:17
 #FROM azul/zulu-openjdk:23-jre
-FROM eclipse-temurin:23-jre
+#FROM eclipse-temurin:23-jre
+FROM eclipse-temurin:23-jdk-alpine
+
 
 VOLUME /tmp
 # RUN sh mvnw --settings setting.xml clean package -DskipTests
